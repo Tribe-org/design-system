@@ -3,6 +3,7 @@ import "./button.css";
 import React from "react";
 
 interface ButtonProps {
+  className?: string;
   /**
    * Is this the principal call to action on the page?
    */
@@ -29,21 +30,15 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = "medium",
   backgroundColor,
+  className,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " ",
-      )}
+      className={className}
       style={{ backgroundColor }}
       {...props}
     >
