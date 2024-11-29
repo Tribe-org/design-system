@@ -7,6 +7,7 @@
     "tsc": "tsc --noEmit",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ignore-pattern 'dist/*' --ignore-pattern 'scripts/*'",
+    "prettier": "prettier . --write",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -60,7 +61,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
+      "yarn prettier",
       "yarn tsc",
       "yarn lint"
     ]
