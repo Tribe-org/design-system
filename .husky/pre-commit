@@ -1,0 +1,4 @@
+# .husky/pre-commit
+yarn tsc
+yarn lint
+yarn lint-staged

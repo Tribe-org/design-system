@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "tsc": "tsc --noEmit",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix --ignore-pattern dist",
+    "lint": "eslint . --ignore-pattern 'dist/*' --ignore-pattern 'scripts/*'",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy": "npm publish"
+    "deploy": "npm publish",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -27,6 +28,7 @@
     "@storybook/react": "7.6.10",
     "@storybook/react-vite": "7.6.10",
     "@storybook/test": "7.6.10",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
@@ -40,6 +42,8 @@
     "eslint-plugin-storybook": "^0.11.1",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.11.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "storybook": "7.6.10",
@@ -58,5 +62,10 @@
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   }
 }
