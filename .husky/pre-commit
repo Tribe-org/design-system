@@ -1,4 +1,4 @@
 # .husky/pre-commit
+npx lint-staged
 yarn tsc
 yarn lint
-yarn lint-staged
