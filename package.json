@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "tsc": "tsc --noEmit",
+    "tsc": "tsc --noEmit -p tsconfig.json",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ignore-pattern 'dist/*' --ignore-pattern 'scripts/*'",
     "prettier": "prettier . --write",
@@ -62,7 +62,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "yarn prettier",
-      "yarn tsc",
+      "bash -c tsc --noEmit",
       "yarn lint"
     ]
   }
