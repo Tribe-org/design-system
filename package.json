@@ -1,5 +1,5 @@
 {
-  "name": "@tribe/design-system",
+  "name": "@tribe-org/design-system",
   "version": "0.0.7",
   "type": "module",
   "main": "./dist/design-system.cjs.js",
