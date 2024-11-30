@@ -16,7 +16,10 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true, // 타입 파일의 진입점을 추가
-      copyDtsFiles: false, // 불필요한 d.ts 파일 복사 방지
+      // copyDtsFiles: false, // 불필요한 d.ts 파일 복사 방지
+      rollupTypes: true,
+      outDir: "dist",
+      tsconfigPath: "./tsconfig.app.json",
     }),
   ],
   build: {
