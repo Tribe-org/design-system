@@ -1,0 +1,2 @@
+# .husky/commit-msg
+node scripts/commit-msg.cjs $1

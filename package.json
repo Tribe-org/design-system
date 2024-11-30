@@ -1,15 +1,26 @@
 {
-  "name": "design-system",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@tribe-org/design-system",
+  "version": "0.0.9",
   "type": "module",
+  "main": "./dist/design-system.cjs.js",
+  "module": "dist/design-system.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "dev": "vite",
+    "tsc": "tsc --noEmit -p tsconfig.json",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ignore-pattern 'dist/*' --ignore-pattern 'scripts/*'",
+    "prettier": "prettier . --write",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy": "npm publish",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -18,29 +29,50 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
     "@eslint/js": "^9.13.0",
-    "@storybook/addon-essentials": "^8.4.5",
-    "@storybook/addon-interactions": "^8.4.5",
-    "@storybook/addon-onboarding": "^8.4.5",
-    "@storybook/blocks": "^8.4.5",
-    "@storybook/react": "^8.4.5",
-    "@storybook/react-vite": "^8.4.5",
-    "@storybook/test": "^8.4.5",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@storybook/addon-essentials": "7.6.10",
+    "@storybook/addon-interactions": "7.6.10",
+    "@storybook/addon-links": "7.6.10",
+    "@storybook/blocks": "7.6.10",
+    "@storybook/react": "7.6.10",
+    "@storybook/react-vite": "7.6.10",
+    "@storybook/test": "7.6.10",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
     "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-storybook": "^0.11.1",
-    "globals": "^15.11.0",
-    "storybook": "^8.4.5",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "storybook": "7.6.10",
+    "tailwindcss": "^3.4.15",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10"
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0"
   },
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn prettier",
+      "bash -c tsc --noEmit",
+      "yarn lint"
     ]
   }
 }
