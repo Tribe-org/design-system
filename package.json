@@ -1,6 +1,6 @@
 {
   "name": "@Tribe-org/design-system",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "./dist/design-system.cjs.js",
   "types": "./dist/index.d.ts",
