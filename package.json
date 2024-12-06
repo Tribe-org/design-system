@@ -8,9 +8,7 @@
   "files": [
     "dist",
     "README.md",
-    "package.json",
-    "tailwind.config.ts",
-    "src/index.css"
+    "package.json"
   ],
   "scripts": {
     "dev": "vite",
