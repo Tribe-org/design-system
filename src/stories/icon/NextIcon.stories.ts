@@ -4,8 +4,8 @@ import { Icon } from "../../components";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Layout/Icon/BackIcon",
-  component: Icon.BackIcon,
+  title: "Layout/Icon/NextIcon",
+  component: Icon.NextIcon,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -21,13 +21,13 @@ const meta = {
     className: "",
     size: 24,
   },
-} satisfies Meta<typeof Icon.BackIcon>;
+} satisfies Meta<typeof Icon.NextIcon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const BackIcon: Story = {
+export const NextIcon: Story = {
   args: {
     className: "",
     size: 24,
