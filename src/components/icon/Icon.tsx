@@ -1,6 +1,7 @@
 import BackIcon from "./BackIcon";
 import CloseIcon from "./CloseIcon";
 import CommentIcon from "./CommentIcon";
+import GroupIcon from "./GroupIcon";
 import InfoIcon from "./InfoIcon";
 import MoreIcon from "./MoreIcon";
 import NextIcon from "./NextIcon";
@@ -14,4 +15,5 @@ export default {
   SearchIcon,
   InfoIcon,
   CommentIcon,
+  GroupIcon,
 };
