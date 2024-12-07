@@ -4,6 +4,7 @@ export { default as comment } from "./comment.svg";
 export { default as group } from "./group.svg";
 export { default as info } from "./info.svg";
 export { default as infoGray } from "./info_gray.svg";
+export { default as menu } from "./menu.svg";
 export { default as moreBlack } from "./more_black.svg";
 export { default as moreGray } from "./more_gray.svg";
 export { default as moreOrange } from "./more_orange.svg";

@@ -3,6 +3,7 @@ import CloseIcon from "./CloseIcon";
 import CommentIcon from "./CommentIcon";
 import GroupIcon from "./GroupIcon";
 import InfoIcon from "./InfoIcon";
+import MenuIcon from "./MenuIcon";
 import MoreIcon from "./MoreIcon";
 import NextIcon from "./NextIcon";
 import PictureIcon from "./PictureIcon";
@@ -18,4 +19,5 @@ export default {
   CommentIcon,
   GroupIcon,
   PictureIcon,
+  MenuIcon,
 };
