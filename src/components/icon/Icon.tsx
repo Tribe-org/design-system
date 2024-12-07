@@ -7,6 +7,7 @@ import MenuIcon from "./MenuIcon";
 import MoreIcon from "./MoreIcon";
 import NextIcon from "./NextIcon";
 import PictureIcon from "./PictureIcon";
+import ResetIcon from "./ResetIcon";
 import SearchIcon from "./SearchIcon";
 
 export default {
@@ -20,4 +21,5 @@ export default {
   GroupIcon,
   PictureIcon,
   MenuIcon,
+  ResetIcon,
 };
