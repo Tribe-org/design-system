@@ -1,5 +1,6 @@
 export { default as back } from "./back.svg";
 export { default as close } from "./close.svg";
+export { default as comment } from "./comment.svg";
 export { default as info } from "./info.svg";
 export { default as infoGray } from "./info_gray.svg";
 export { default as moreBlack } from "./more_black.svg";
