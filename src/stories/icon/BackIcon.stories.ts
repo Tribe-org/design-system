@@ -17,10 +17,6 @@ const meta = {
     className: { control: "text" },
     size: { control: "number" },
   },
-  args: {
-    className: "",
-    size: 24,
-  },
 } satisfies Meta<typeof Icon.BackIcon>;
 
 export default meta;

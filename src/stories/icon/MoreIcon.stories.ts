@@ -18,12 +18,7 @@ const meta = {
     size: { control: "number" },
     color: { control: "select", options: ["black", "white", "gray", "orange"] },
   },
-  args: {
-    className: "",
-    size: 24,
-    color: "black",
-  },
-} satisfies Meta<typeof Icon.BackIcon>;
+} satisfies Meta<typeof Icon.MoreIcon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

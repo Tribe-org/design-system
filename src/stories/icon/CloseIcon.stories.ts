@@ -17,11 +17,7 @@ const meta = {
     className: { control: "text" },
     size: { control: "number" },
   },
-  args: {
-    className: "",
-    size: 24,
-  },
-} satisfies Meta<typeof Icon.BackIcon>;
+} satisfies Meta<typeof Icon.CloseIcon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

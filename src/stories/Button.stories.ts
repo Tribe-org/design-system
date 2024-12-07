@@ -16,9 +16,6 @@ const meta = {
   argTypes: {
     className: { control: "text" },
   },
-  args: {
-    className: "",
-  },
 } satisfies Meta<typeof Button>;
 
 export default meta;

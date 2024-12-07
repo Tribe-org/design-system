@@ -18,11 +18,6 @@ const meta = {
     size: { control: "number" },
     color: { control: "select", options: ["black", "gray"] },
   },
-  args: {
-    className: "",
-    size: 24,
-    color: "black",
-  },
 } satisfies Meta<typeof Icon.SearchIcon>;
 
 export default meta;
