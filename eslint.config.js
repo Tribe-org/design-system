@@ -16,5 +16,6 @@ export default tsEslint.config(tsEslint.configs.recommended, {
     "unused-imports/no-unused-imports": "error", // 미사용 import 제거
     "unused-imports/no-unused-vars": "error",
     "react/react-in-jsx-scope": "off", // React 17+ JSX 트랜스폼 설정
+    "@typescript-eslint/no-empty-object-type": "off",
   },
 });
