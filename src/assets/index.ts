@@ -9,5 +9,7 @@ export { default as moreGray } from "./more_gray.svg";
 export { default as moreOrange } from "./more_orange.svg";
 export { default as moreWhite } from "./more_white.svg";
 export { default as next } from "./next.svg";
+export { default as picture } from "./picture.svg";
+export { default as pictureGray } from "./picture_gray.svg";
 export { default as search } from "./search.svg";
 export { default as searchGray } from "./search_gray.svg";
