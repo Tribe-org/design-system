@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import Divider from "../../components/layout/Divider";
+import { Divider as DividerComponent } from "../../components/layout";
 
 const meta = {
   title: "Layout/Divider",
-  component: Divider,
+  component: DividerComponent,
   parameters: {
     layout: "centered",
   },
@@ -15,12 +15,12 @@ const meta = {
       control: { type: "select" },
     },
   },
-} satisfies Meta<typeof Divider>;
+} satisfies Meta<typeof DividerComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Divider: Story = {
   args: {
     size: "medium",
   },

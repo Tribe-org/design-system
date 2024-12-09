@@ -1,7 +1,9 @@
+import { HTMLAttributes } from "react";
+
 import { Size } from "../../types";
 
-interface DividerProps {
-  size: Size;
+interface DividerProps extends HTMLAttributes<HTMLDivElement> {
+  size?: Size;
 }
 
 const getHeight = (size: Size) => {
@@ -16,10 +18,17 @@ const getHeight = (size: Size) => {
   }
 };
 
-export default function Divider({ size }: DividerProps) {
-  // size에 따라서 h 변경 훅
-
+export default function Divider({
+  size = "medium",
+  className,
+  ...props
+}: DividerProps) {
   const height = getHeight(size);
 
-  return <div className={`w-[236px] bg-gray-300 ${height}`}></div>;
+  return (
+    <div
+      className={`w-screen max-w-[400px] bg-[#E0E0E0] ${height} ${className}`}
+      {...props}
+    />
+  );
 }
