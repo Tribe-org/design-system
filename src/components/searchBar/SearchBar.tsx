@@ -60,7 +60,8 @@ export default function SearchBar({
       />
       <input
         className={twMerge(
-          "inline-block h-full w-full rounded-lg bg-[#EEEEEE] p-2 pl-10 text-sm font-medium leading-[140%] text-[#9E9E9E] outline-none",
+          "inline-block h-full w-full rounded-lg bg-[#EEEEEE] p-2 pl-10 text-sm font-medium leading-[140%] text-black outline-none",
+          "placeholder:text-[#9E9E9E]",
           className,
         )}
         value={search}
