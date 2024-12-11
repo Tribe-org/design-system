@@ -1,4 +1,5 @@
 export { default as back } from "./back.svg";
+export { default as circle } from "./circle.svg";
 export { default as close } from "./close.svg";
 export { default as comment } from "./comment.svg";
 export { default as group } from "./group.svg";
