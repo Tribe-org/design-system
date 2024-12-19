@@ -8,6 +8,7 @@ interface ToggleProps extends HTMLAttributes<HTMLDivElement> {
   size?: Size;
   state?: boolean;
   animate?: boolean;
+  onToggle?: (state: boolean) => void;
 }
 
 const layoutConfig: Record<Size, Record<string, number>> = {
@@ -50,6 +51,7 @@ export default function Toggle({
   size = "medium",
   state = false,
   animate = true,
+  onToggle,
   className,
   ...htmlAttributes
 }: ToggleProps) {
@@ -69,7 +71,12 @@ export default function Toggle({
   }, [state]);
 
   const handleToggleState = () => {
-    setToggleState(!toggleState);
+    const nextState = !toggleState;
+    setToggleState(nextState);
+
+    if (onToggle) {
+      onToggle(nextState);
+    }
   };
 
   return (

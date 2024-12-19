@@ -24,6 +24,9 @@ const meta = {
     animate: {
       control: "boolean",
     },
+    onToggle: {
+      action: "clicked",
+    },
   },
 } satisfies Meta<typeof ToggleComponent>;
 
