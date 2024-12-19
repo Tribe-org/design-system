@@ -21,6 +21,9 @@ const meta = {
     state: {
       control: "boolean",
     },
+    animate: {
+      control: "boolean",
+    },
   },
 } satisfies Meta<typeof ToggleComponent>;
 
@@ -32,5 +35,6 @@ export const Toggle: Story = {
   args: {
     size: "medium",
     state: false,
+    animate: true,
   },
 };

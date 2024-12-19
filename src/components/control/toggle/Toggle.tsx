@@ -7,6 +7,7 @@ import { Icon } from "../../icon";
 interface ToggleProps extends HTMLAttributes<HTMLDivElement> {
   size?: Size;
   state?: boolean;
+  animate?: boolean;
 }
 
 const layoutConfig: Record<Size, Record<string, number>> = {
@@ -48,6 +49,7 @@ const uiConfig: Record<Size, Record<string, string>> = {
 export default function Toggle({
   size = "medium",
   state = false,
+  animate = true,
   className,
   ...htmlAttributes
 }: ToggleProps) {
@@ -88,12 +90,15 @@ export default function Toggle({
           height="30"
           rx="15"
           fill={toggleState ? "#41DEAC" : "#CFCFCF"}
-          style={{ transition: "fill 0.5s" }}
+          style={{ ...(animate && { transition: "fill 0.5s" }) }}
         />
       </svg>
       <Icon.EllipseIcon
         className={twMerge("absolute", uiConfig[size].iconTopPosition)}
-        style={{ transition: "all 0.5s", left: iconLeftPosition }}
+        style={{
+          left: iconLeftPosition,
+          ...(animate && { transition: "all 0.5s" }),
+        }}
         size={layoutConfig[size].radius * 2}
       />
     </div>
