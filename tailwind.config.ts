@@ -4,9 +4,6 @@ export default {
   content: ["./src/**/*.{ts,tsx}", "./.storybook/**/*.{js,ts}"],
   theme: {
     extend: {
-      fontFamily: {
-        pretendard: ["Pretendard-Regular", "sans-serif"],
-      },
       colors: {
         "tribe-green": "#41DEAC",
         "tribe-orange": "#F8680E",
