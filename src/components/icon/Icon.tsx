@@ -1,6 +1,7 @@
 import BackIcon from "./BackIcon";
 import CloseIcon from "./CloseIcon";
 import CommentIcon from "./CommentIcon";
+import EllipseIcon from "./EllipseIcon";
 import GroupIcon from "./GroupIcon";
 import InfoIcon from "./InfoIcon";
 import MenuIcon from "./MenuIcon";
@@ -22,4 +23,5 @@ export default {
   PictureIcon,
   MenuIcon,
   ResetIcon,
+  EllipseIcon,
 };
