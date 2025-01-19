@@ -1,6 +1,6 @@
 {
   "name": "@tribe-org/design-system",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "type": "module",
   "main": "./dist/design-system.cjs.js",
   "module": "dist/design-system.es.js",
@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
